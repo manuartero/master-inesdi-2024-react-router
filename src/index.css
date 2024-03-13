@@ -4,16 +4,16 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden; /* Ensures no default margin/padding and full height */
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 40px;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
   font-weight: 400;
 
   background-color: #242424;
+  color: #ffffff; /* Adjust text color for better contrast */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,24 +22,18 @@ html {
 
 main {
   width: 90%;
-  max-width: 90%;
-  height: 90vh;
+  height: 100vh;
+  max-width: 1200px; /* Adjust maximum width for better responsiveness */
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #242424;
-
-  display: flex;
-  flex-direction: row; /* Adjust the layout to include the sidebar */
+  font-size: 50px;
 }
 
 #layout {
   display: flex;
   flex-direction: row;
-  position: sticky;
-  top: 0;
-  height: 100vh;
 }
 
 ul {
@@ -51,37 +45,45 @@ li {
   margin-bottom: 15px;
 }
 
+/* Adjust background colors for better readability */
 .home-page {
-  background-color: #c5d1d3;
+  background-color: #3f4e4d;
 }
 
 .contact-page {
-  background-color: #f4e5e6;
+  background-color: #4f4546;
 }
 
 .posts-page {
-  background-color: #e6f4e5;
+  background-color: #252c25;
 }
 
 .error-page {
-  background-color: #f5ebeb;
+  background-color: #412d2d;
 }
 
-button {
-  border-radius: 8px;
+button,
+a {
+  border-radius: 4px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #333;
+  color: #ffffff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s, border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+
+button:hover,
+a:hover {
+  background-color: #555; /* Darker hover color */
 }
+
 button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:focus-visible,
+a:focus,
+a:focus-visible {
+  outline: none; /* Removed thick focus outline */
 }

@@ -5,41 +5,33 @@ import { ErrorPage } from "./pages/error-page";
 import { Home } from "./pages/home";
 import { Posts, postsLoader } from "./pages/posts";
 
+const withLayout = (Component: React.ElementType) => {
+  return (
+    <Layout>
+      <Component />
+    </Layout>
+  );
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Layout>
-        <Home />
-      </Layout>
-    ),
-    errorElement: (
-      <Layout>
-        <ErrorPage />
-      </Layout>
-    ),
+    element: withLayout(Home),
+    errorElement: withLayout(ErrorPage),
   },
   {
     path: "/posts",
     children: [
       {
         path: "/posts/:id",
-        element: (
-          <Layout>
-            <Posts />
-          </Layout>
-        ),
+        element: withLayout(Posts),
         loader: postsLoader,
       },
     ],
   },
   {
     path: "/contact",
-    element: (
-      <Layout>
-        <Contact />
-      </Layout>
-    ),
+    element: withLayout(Contact),
   },
 ]);
 

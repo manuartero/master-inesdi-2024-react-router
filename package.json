@@ -1,8 +1,21 @@
 {
   "name": "master-inesdi-2024-react-router",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Example for INESDI 2024 - Week 4",
   "type": "module",
+  "main": "src/index.tsx",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "react-router"
+  ],
+  "author": "manutero.developer@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
