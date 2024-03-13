@@ -29,18 +29,42 @@ main {
   flex-direction: column;
   justify-content: center;
   color: #242424;
+
+  display: flex;
+  flex-direction: row; /* Adjust the layout to include the sidebar */
+}
+
+#layout {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
 }
 
 .home-page {
-  background-color: #cdcdcd;
+  background-color: #c5d1d3;
 }
 
 .contact-page {
   background-color: #f4e5e6;
 }
 
-.about-page {
+.posts-page {
   background-color: #e6f4e5;
+}
+
+.error-page {
+  background-color: #f5ebeb;
 }
 
 button {
